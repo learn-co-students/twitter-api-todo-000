@@ -4,7 +4,6 @@ require_relative './twitter.rb'
 
 test = TwitterApi.new
 
-=begin
 puts "What is your name"
 name = gets.chomp
 puts "Oh, hello #{name}."
@@ -14,7 +13,6 @@ puts "It's called: What about me is publically available on Twitter!"
 sleep(2)
 puts "Ready? Let's go"
 sleep(2)
-=end
 puts "What is your twitter username? Don't worry, I won't ask for your password..."
 username = gets.chomp
 puts "Ok.. Lets see..."
