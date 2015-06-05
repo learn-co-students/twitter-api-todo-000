@@ -16,14 +16,24 @@ class TwitterApi
   end
 
   def most_recent_follower
-    # find the Twitter gem method that accomplishes this!
+    client.friends.first
   end
 
   def find_user_for(username)
-    # find the Twitter gem method that accomplishes this!
+    client.user(username)
+  end
+
+  def number_of_followers_for(user)
+    client.followers(user).count
   end
 
   def find_followers_for(user)
-    # find the Twitter gem method that accomplishes this, and limit it to 10 followers only!
+    client.followers(user).take(10)
+  end
+
+  def find_followers_names_for(user)
+    array = []
+    client.followers(user).each{|id| array << id.name}
+    array
   end
 end
