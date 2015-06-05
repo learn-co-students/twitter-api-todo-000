@@ -21,7 +21,6 @@ class TwitterApi
 
   def find_user_for(username)
     client.user(username)
-    #changeagain
   end
 
   def number_of_followers_for(user)
