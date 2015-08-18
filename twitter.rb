@@ -1,6 +1,5 @@
 require 'twitter'
 require 'yaml'
-
 require "pry"
 
 class TwitterApi
@@ -18,7 +17,7 @@ class TwitterApi
   end
 
   def most_recent_follower
-    client.followers.first
+    client.friends.first
   end
 
   def find_user_for(username)
@@ -31,8 +30,5 @@ class TwitterApi
       answer_array<<follower
     end
     answer_array
-
-    # binding.pry
-    # find the Twitter gem method that accomplishes this, and limit it to 10 followers only!
   end
 end

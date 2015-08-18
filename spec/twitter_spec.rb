@@ -29,13 +29,13 @@ describe TwitterApi do
 
   describe "#find_user_for" do
     it 'returns the Twitter user associated with username that you passed in as a parameter' do
-      expect( client.find_user_for(user) ).to eq( SpecTwitterApi.new.find_user_for(user) )
+      expect(client.find_user_for(user)).to eq(SpecTwitterApi.new.find_user_for(user))
     end
   end
 
   describe "#find_followers_for" do
     it 'returns 10 followers for a specific Twitter user' do
-      expect( client.find_followers_for(user) ).to eq( SpecTwitterApi.new.find_followers_for(user) )
+      expect(client.find_followers_for(user)).to eq(SpecTwitterApi.new.find_followers_for(user))
     end
   end
 end
