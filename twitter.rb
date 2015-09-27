@@ -17,6 +17,7 @@ class TwitterApi
 
   def most_recent_friend
     #find the twitter gem method that retrieves a user's friends and grab the most recent friend
+    client.friends.first
   end
 
   def find_user_for(username)
