@@ -25,7 +25,7 @@ class TwitterApi
   end
 
   def find_followers_for(username)
-    @client.user(username).take(10)
+    @client.followers(username).take(10)
     #find the twitter gem method that returns the follows of a given user
   end
 
